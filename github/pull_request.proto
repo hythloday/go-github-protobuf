@@ -11,10 +11,11 @@ option (gogoproto.sizer_all) = true;
 option (gogoproto.unmarshaler_all) = true;
 option (gogoproto.goproto_getters_all) = false;
 
-import "github.com/jhaynie/go-github-protobuf/github/user.proto";
-import "github.com/jhaynie/go-github-protobuf/github/repository.proto";
-import "github.com/jhaynie/go-github-protobuf/github/milestone.proto";
-import "github.com/jhaynie/go-github-protobuf/github/reactions.proto";
+import "github.com/hythloday/go-github-protobuf/github/user.proto";
+import "github.com/hythloday/go-github-protobuf/github/repository.proto";
+import "github.com/hythloday/go-github-protobuf/github/milestone.proto";
+import "github.com/hythloday/go-github-protobuf/github/reactions.proto";
+import "github.com/hythloday/go-github-protobuf/github/label.proto";
 
 message RepositoryRef {
 	string label = 1;
@@ -76,4 +77,5 @@ message PullRequest {
 	int32 deletions = 34;
 	int32 changed_files = 35;
 	Reactions reactions = 36;
+	repeated Label labels = 37;
 }
